@@ -19,7 +19,6 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(
                   Icons.account_circle_outlined,
@@ -31,8 +30,8 @@ class MainDrawer extends StatelessWidget {
                 Text(
                   "User",
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
-                    fontSize: 35,
+                    color: Theme.of(context).colorScheme.onPrimaryContainer,
+                    fontSize: 30,
                     fontWeight: FontWeight.w600,
                   ),
                 )
@@ -42,7 +41,7 @@ class MainDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(
               Icons.account_circle,
-              size: 26,
+              size: 28,
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
@@ -56,12 +55,12 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.healing,
-              size: 26,
+              Icons.settings,
+              size: 28,
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
-              'Allergies',
+              'Settings',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontSize: 24,
