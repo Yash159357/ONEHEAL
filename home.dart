@@ -15,11 +15,10 @@ class HomeScreen extends ConsumerStatefulWidget {
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-
     final List<Visit> visitList = ref.watch(visitListProvider);
 
     final visitListWidget = VisitElement(visitList: visitList);
-    
+
     return visitList.isEmpty ? const Text("No data") : visitListWidget;
   }
 }
