@@ -25,13 +25,23 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "VitalLink",
+          "OneHeal",
           style: TextStyle(
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.onPrimary,
               fontSize: 30,
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w500),
         ),
-        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.4),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: const Icon(
+              Icons.logout_outlined,
+            ),
+          )
+        ],
       ),
       drawer: MainDrawer(),
       body: screenList[_selectPageIndex],
